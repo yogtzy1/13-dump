@@ -1,6 +1,3 @@
-/* ===============================
-   CONFIG
-================================= */
 const PASSWORD = "13082024";
 
 const quotes = [
@@ -15,9 +12,6 @@ const quotes = [
 let playing = true;
 let slideIndex = 0;
 
-/* ===============================
-   UNLOCK
-================================= */
 function unlock(){
   if (pass.value === PASSWORD) {
     lock.style.display = "none";
@@ -34,99 +28,67 @@ function unlock(){
   }
 }
 
-/* ===============================
-   HEART ANIMATION
-================================= */
 function startHearts(){
-  setInterval(() => {
-    const heart = document.createElement("span");
-    heart.textContent = "💗";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (4 + Math.random() * 5) + "s";
-    document.querySelector(".hearts").appendChild(heart);
-    setTimeout(() => heart.remove(), 9000);
-  }, 350);
+  setInterval(()=>{
+    const h=document.createElement("span");
+    h.textContent="💗";
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(4+Math.random()*5)+"s";
+    document.querySelector(".hearts").appendChild(h);
+    setTimeout(()=>h.remove(),9000);
+  },350);
 }
 
-/* ===============================
-   AUTO QUOTES
-================================= */
 function autoQuote(){
-  let i = 0;
-  quote.textContent = quotes[0];
-  setInterval(() => {
+  let i=0;
+  quote.textContent=quotes[0];
+  setInterval(()=>{
     i++;
-    quote.textContent = quotes[i % quotes.length];
-  }, 4000);
+    quote.textContent=quotes[i%quotes.length];
+  },4000);
 }
-
-
-  <section class="slideshow">
-  <img class="slide-img" src="foto1.jpg">
-  <img class="slide-img" src="foto2.jpg">
-  <img class="slide-img" src="foto3.jpg">
-</section>
-
 
 function initSlideshow(){
-  const slides = document.querySelectorAll(".slide-img");
-  if (!slides.length) return;
-
-  slides.forEach((img, i) => {
-    img.style.display = i === 0 ? "block" : "none";
-    img.style.opacity = i === 0 ? "1" : "0";
-    img.style.transition = "opacity .7s ease";
+  const slides=document.querySelectorAll(".slide-img");
+  slides.forEach((img,i)=>{
+    img.style.display=i===0?"block":"none";
+    img.style.opacity=i===0?"1":"0";
+    img.style.transition="opacity .7s";
   });
 
-  setInterval(() => {
-    slides[slideIndex].style.opacity = "0";
-    slides[slideIndex].style.display = "none";
-
-    slideIndex = (slideIndex + 1) % slides.length;
-
-    slides[slideIndex].style.display = "block";
-    setTimeout(() => {
-      slides[slideIndex].style.opacity = "1";
-    }, 50);
-  }, 3500);
+  setInterval(()=>{
+    slides[slideIndex].style.opacity="0";
+    slides[slideIndex].style.display="none";
+    slideIndex=(slideIndex+1)%slides.length;
+    slides[slideIndex].style.display="block";
+    setTimeout(()=>slides[slideIndex].style.opacity="1",50);
+  },3500);
 }
 
-/* ===============================
-   DAY COUNTER
-================================= */
 function showDays(){
-  const start = new Date("2024-08-13");
-  const now = new Date();
-  const days = Math.floor((now - start) / (1000 * 60 * 60 * 24));
-  dayCount.textContent = days + " hari bersama 💕";
+  const start=new Date("2024-08-13");
+  const now=new Date();
+  const days=Math.floor((now-start)/(1000*60*60*24));
+  dayCount.textContent=days+" hari bersama 💕";
 }
 
-/* ===============================
-   AUTO SCROLL
-================================= */
 function autoScroll(){
-  setInterval(() => {
-    window.scrollBy({ top: 1, behavior: "smooth" });
-  }, 80);
+  setInterval(()=>{
+    window.scrollBy({top:1,behavior:"smooth"});
+  },80);
 }
 
-/* ===============================
-   MUSIC PLAYER
-================================= */
 function toggleMusic(){
-  if (playing) {
+  if(playing){
     music.pause();
-    playIcon.textContent = "▶️";
-  } else {
+    playIcon.textContent="▶️";
+  }else{
     music.play();
-    playIcon.textContent = "⏸️";
+    playIcon.textContent="⏸️";
   }
-  playing = !playing;
+  playing=!playing;
 }
 
-/* ===============================
-   LOVE BUTTON
-================================= */
 function loveAlert(){
   alert("Aku sayang kamu selamanya, Cheisya 💖");
 }
