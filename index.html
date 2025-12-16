@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kenangan Hendra & Cheisya 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEART ANIMATION -->
+<div class="hearts"></div>
+
+<!-- PASSWORD -->
+<div class="password-screen" id="lock">
+  <h1>💗 Kenangan Kita 💗</h1>
+  <p>Masukkan password cinta kita</p>
+  <input type="password" id="pass" placeholder="DDMMYYYY">
+  <button onclick="unlock()">Masuk</button>
+</div>
+
+<!-- MAIN -->
+<div class="main hidden" id="main">
+
+  <!-- MUSIC -->
+  <audio id="music" src="music.mp3" loop></audio>
+
+  <!-- MINI PLAYER -->
+  <div class="mini-player" onclick="toggleMusic()">
+    <span id="playIcon">⏸️</span>
+    <span class="song">Lagu Kita 💕</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Hendra & Cheisya 💖</h1>
+    <p id="quote"></p>
+  </section>
+
+  <!-- SLIDESHOW -->
+  <section class="slideshow">
+    <img id="slideImg" src="images/1.jpg">
+  </section>
+
+  <!-- STORY -->
+  <section class="story">
+    <h2>💌 Cerita Kita</h2>
+    <p>
+      Cheisya, sejak pertama kali kita bersama,
+      aku belajar bahwa cinta bukan hanya tentang bahagia,
+      tapi tentang bertahan, saling mengerti,
+      dan tetap memilih satu sama lain setiap hari.
+      <br><br>
+      Kamu yang sabar, cerewet, dan manis,
+      adalah alasan aku ingin terus pulang.
+    </p>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown">
+    <h2>⏳ Kita Sudah Bersama Selama</h2>
+    <p id="dayCount"></p>
+  </section>
+
+  <!-- ENDING -->
+  <section class="ending">
+    <h2>Untuk Cheisya 💕</h2>
+    <p>
+      Sayaang…<br><br>
+      Terima kasih sudah hadir di hidupku sejak
+      <b>13 Agustus 2024</b>.
+      Terima kasih sudah bertahan,
+      sudah sabar,
+      dan tetap memilih aku sampai hari ini.
+      <br><br>
+      Kalau suatu hari aku lelah,
+      ingatkan aku bahwa kita pernah saling berjanji
+      untuk terus berjalan bersama.
+    </p>
+
+    <button onclick="loveAlert()">Aku Sayang Kamu 💗</button>
+  </section>
+
+  <footer>
+    Made with 💕 by Hendra, only for Cheisya
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
