@@ -2,92 +2,80 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Kenangan Hendra & Cheisya 💖</title>
+<title>Kenangan Kita 💗</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ANIMASI HATI -->
-<div class="hearts"></div>
-
-<!-- PASSWORD -->
-<div class="password-screen" id="lock">
-  <h1>💗 Kenangan Kita 💗</h1>
-  <p>Masukkan password cinta kita</p>
-  <input type="password" id="pass" placeholder="DDMMYYYY">
-  <button onclick="unlock()">Masuk</button>
-</div>
-
-<!-- MAIN CONTENT -->
-<div class="main hidden" id="main">
-
-  <!-- MUSIC -->
-  <audio id="music" src="music.mp3" loop></audio>
-
-  <!-- MINI PLAYER -->
-  <div class="mini-player" onclick="toggleMusic()">
-    <span id="playIcon">⏸️</span>
-    <span>Lagu Kita 💕</span>
+<!-- LOCK SCREEN -->
+<div class="lock" id="lock">
+  <div class="lock-box">
+    <h1>💗 Kenangan Kita</h1>
+    <p>Masukkan tanggal jadian</p>
+    <input type="password" id="pass" placeholder="13082024">
+    <button onclick="unlock()">Masuk</button>
   </div>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Hendra & Cheisya 💖</h1>
-    <p id="quote"></p>
-  </section>
-
-  <!-- SLIDESHOW -->
-  <section class="slideshow">
-    <img class="slide-img" src="foto1.jpg">
-    <img class="slide-img" src="foto2.jpg">
-    <img class="slide-img" src="foto3.jpg">
-    <img class="slide-img" src="foto4.jpg">
-  </section>
-
-  <!-- STORY -->
-  <section class="story">
-    <h2>💌 Cerita Kita</h2>
-    <p>
-      Cheisya, sejak pertama kali kita bersama,
-      aku belajar bahwa cinta bukan hanya tentang bahagia,
-      tapi tentang bertahan, saling mengerti,
-      dan tetap memilih satu sama lain setiap hari.
-      <br><br>
-      Kamu yang sabar, cerewet, dan manis,
-      adalah alasan aku ingin terus pulang.
-    </p>
-  </section>
-
-  <!-- COUNTER -->
-  <section class="countdown">
-    <h2>⏳ Kita Sudah Bersama</h2>
-    <p id="dayCount"></p>
-  </section>
-
-  <!-- ENDING -->
-  <section class="ending">
-    <h2>Untuk Cheisya 💕</h2>
-    <p>
-      Sayaang…<br><br>
-      Terima kasih sudah hadir di hidupku sejak
-      <b>13 Agustus 2024</b>.
-      Terima kasih sudah sabar,
-      cerewet,
-      dan selalu manis ke aku.
-      <br><br>
-      Jangan pergi ya,
-      temani aku terus 🤍
-    </p>
-    <button onclick="loveAlert()">Aku Sayang Kamu 💗</button>
-  </section>
-
-  <footer>
-    Made with 💕 by Hendra
-  </footer>
-
 </div>
+
+<!-- MAIN -->
+<main class="hidden" id="main">
+
+<audio id="music" src="music.mp3" loop></audio>
+
+<!-- MINI PLAYER -->
+<div class="player" onclick="toggleMusic()">
+  <span id="playIcon">⏸</span>
+  <span>Lagu Kita</span>
+</div>
+
+<!-- HEADER -->
+<header class="hero">
+  <h1>Hendra & Cheisya</h1>
+  <p id="quote"></p>
+</header>
+
+<!-- SLIDESHOW -->
+<section class="slideshow">
+  <img class="slide-img" src="imgs/foto1.jpg">
+  <img class="slide-img" src="imgs/foto2.jpg">
+  <img class="slide-img" src="imgs/foto3.jpg">
+  <img class="slide-img" src="imgs/foto4.jpg">
+</section>
+
+<!-- STORY -->
+<section class="card">
+  <h2>Cerita Kita</h2>
+  <p>
+    Sejak 13 Agustus 2024, aku belajar bahwa cinta
+    bukan hanya tentang bahagia, tapi tentang
+    bertahan dan memilih orang yang sama setiap hari.
+  </p>
+</section>
+
+<!-- DAY COUNT -->
+<section class="card center">
+  <h2>Waktu Bersama</h2>
+  <p id="dayCount"></p>
+</section>
+
+<!-- ENDING -->
+<section class="card center">
+  <h2>Untuk Kamu</h2>
+  <p>
+    Terima kasih sudah sabar, cerewet, dan manis.
+    Jangan pernah pergi ya 🤍
+  </p>
+  <button class="love-btn" onclick="loveAlert()">Aku Sayang Kamu</button>
+</section>
+
+<footer>
+  Made with 💗 by Hendra
+</footer>
+
+</main>
 
 <script src="script.js"></script>
 </body>
 </html>
+
